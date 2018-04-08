@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="asadmin">
+    <head>
+        <title>Admin User</title>
+        <link rel="shortcut icon" href="images/user_admin.ico" />
+
+        <!-- build:css vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+        <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css">
+        <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css">
+        <link rel="stylesheet" href="bower_components/animate.css/animate.css">
+        <link rel="stylesheet" href="bower_components/angular-carousel/dist/angular-carousel.css">
+        <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+
+        <link rel="stylesheet" href="dashboard/components/rdash-ui/dist/css/rdash.min.css">
+
+        <!-- build:css application.css -->
+        <!-- inject:css -->
+        <link href="css/app.css" rel="stylesheet"/>
+        <link href="css/login_register.css" rel="stylesheet"/>
+    </head>
+    <body>
+
+        <div ui-view=''>
+            
+        </div>
+
+        <!-- build:js vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <!-- <script src="bower_components/jquery/dist/jquery.min.js" ></script> -->
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" ></script>
+        <!-- <script src="bower_components/angular/angular.min.js" ></script> -->
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js" ></script>
+        <script src="bower_components/ngstorage/ngStorage.min.js" ></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-spring-data-rest/dist/angular-spring-data-rest.js"></script>
+        <script src="bower_components/angular-translate/angular-translate.js"></script>
+        <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js"></script>
+        <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+        <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+        <script src="bower_components/angular-confirm/dist/angular-confirm.min.js"></script>
+        <script src="bower_components/ng-idle/angular-idle.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+        <script src="bower_components/angular-carousel/dist/angular-carousel.js"></script>
+        <script src="bower_components/angular-ui-select/dist/select.js"></script>
+        <script src="bower_components/angular-spinner/angular-spinner.js"></script>
+        <script src="bower_components/angular-slick/dist/slick.js"></script>
+
+        <!-- build:js application.js -->
+        <!-- injest: js -->
+        <script src="appjs/app.module.js"></script>
+        <script src="appjs/app.state.js"></script>
+        <script src="services/authentication.service.js"></script>
+        <script src="services/flash.service.js"></script>
+        <!-- Real user service that uses an api -->
+        <script src="restendpoints/user.service.js"></script>
+        <!-- user service for demo that uses local storage -->
+        <script src="services/user.service.local-storage.js"></script>
+        <!-- controller -->
+        <script src="login/login.state.js"></script>
+        <script src="login/login.controller.js"></script>
+        <script src="register/register.controller.js"></script>
+        <script src="register/register.state.js"></script>
+        <script src="home/home.controller.js"></script>
+
+        <!-- Dashboard -->
+        <script src="dashboard/js/controllers/alert-ctrl.js"></script>
+        <script src="dashboard/js/controllers/master-ctrl.js"></script>
+        <script src="dashboard/js/directives/loading.js"></script>
+        <script src="dashboard/js/directives/widget-body.js"></script>
+        <script src="dashboard/js/directives/widget-footer.js"></script>
+        <script src="dashboard/js/directives/widget-header.js"></script>
+        <script src="dashboard/js/directives/widget.js"></script>
+        <script src="dashboard/home.state.js"></script>
+        
+    </body>
+</html>
+
+

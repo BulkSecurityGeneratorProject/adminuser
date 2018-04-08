@@ -1,0 +1,59 @@
+<script type="text/javascript">
+     $('.loginform').find('input, textarea').on('keyup blur focus', function (e) {
+  
+  var $this = $(this),
+      label = $this.prev('label');
+
+      if (e.type === 'keyup') {
+            if ($this.val() === '') {
+          label.removeClass('active highlight');
+        } else {
+          label.addClass('active highlight');
+        }
+    } else if (e.type === 'blur') {
+        if( $this.val() === '' ) {
+            label.removeClass('active highlight'); 
+            } else {
+            label.removeClass('highlight');   
+            }   
+    } else if (e.type === 'focus') {
+      
+      if( $this.val() === '' ) {
+            label.removeClass('highlight'); 
+            } 
+      else if( $this.val() !== '' ) {
+            label.addClass('highlight');
+            }
+    }
+
+});
+ </script>
+
+ <div class="loginform">
+        <h1>Admin User!</h1>
+        <div ng-class="{'alert-incorrect': flash.type === 'error' }" ng-show="flash" ng-bind="flash.message"></div>
+        <form name="form" ng-submit="vm.login()" role="form">
+            <div class="field-wrap" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+                <label>Username<span class="req">*</span>
+                </label>
+                <input type="text" name="username" id="username" ng-model="vm.username" required />
+                <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+            </div>
+            <div class="field-wrap" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+                <label> Password<span class="req">*</span>
+                </label>
+                <input type="password" name="password" id="password" ng-model="vm.password" required />
+                <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+            </div>
+            <div class="form-actions">
+                <p class="login_signup">
+                    <img style="float:left;" ng-if="vm.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                    Not a member?<a id="log_reg" ui-sref="register">Register</a>
+                </p>
+                <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="button button-block">Sign In</button>
+                        
+                        <!-- <a ui-sref="register" class="btn btn-link">Register</a> -->
+            </div>
+        </form>
+    
+</div>
